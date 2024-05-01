@@ -1,0 +1,12 @@
+
+# Vscode files
+.vscode/
+
+# Project files
+*.csproj
+*.sln
+
+# Unity
+/Library/
+/Logs/
+/Temp/
