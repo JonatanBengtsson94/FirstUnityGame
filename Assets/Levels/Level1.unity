@@ -1050,7 +1050,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.9280778
+  orthographic size: 1.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1075,7 +1075,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1095,6 +1095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   player: {fileID: 1117986421}
+  lookAheadDistance: 1
 --- !u!1 &528603198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1606,7 +1607,7 @@ Transform:
   m_GameObject: {fileID: 717774747}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04825531, y: 0.5123599, z: -0.0018686049}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2405,7 +2406,8 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 5
+  speed: 2
+  jumpPower: 2
 --- !u!95 &1117986425
 Animator:
   serializedVersion: 5

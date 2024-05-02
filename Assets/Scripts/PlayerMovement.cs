@@ -6,7 +6,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask groundLayer;
-    [SerializeField] private int speed = 5; 
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpPower; 
 
     private void Awake() 
     {
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump() 
     { 
-        body.velocity = new Vector2(body.velocity.x, speed); 
+        body.velocity = new Vector2(body.velocity.x, speed * jumpPower); 
         animator.SetTrigger("jump");
     }
 
