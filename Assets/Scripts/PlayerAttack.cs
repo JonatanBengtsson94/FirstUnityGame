@@ -27,11 +27,11 @@ public class PlayerAttack : MonoBehaviour
         animator.SetTrigger("attack");
         cooldownTimer = 0;
 
-        FindBullet().transform.position = firePoint.position;
-        FindBullet().GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
+        GetBullet().transform.position = firePoint.position;
+        GetBullet().GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
-    private GameObject FindBullet()
+    private GameObject GetBullet()
     {
         foreach (var bullet in bullets)
         {
