@@ -8,7 +8,7 @@ public class NewBehaviourScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<Health>().TakeDamage(-50);
+            collision.GetComponent<Health>().Heal(50);
             gameObject.SetActive(false);
         }
     }

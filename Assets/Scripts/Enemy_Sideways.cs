@@ -8,7 +8,7 @@ public class Enemy_Sideways : MonoBehaviour
     private float startingXPos;
     private bool movingRight;
 
-    private void Awake()
+    private void Start()
     {
         startingXPos = transform.position.x;
     }

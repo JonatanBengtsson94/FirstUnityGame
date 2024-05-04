@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float lookAheadDistance;
     private Vector3 velocity = Vector3.zero;
 
-    private void Awake()
+    private void Start()
     {
         targetPos = new Vector3(player.position.x, player.position.y, transform.position.z);
     }
