@@ -3,22 +3,22 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private int startingHealth;
-    private int currentHealth;
+    public int CurrentHealth { get; private set; }
     private Animator animator;
 
     private void Awake()
     {
-        currentHealth = startingHealth;
+        CurrentHealth = startingHealth;
         animator = GetComponent<Animator>();    
     }
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        if (currentHealth > 0)
+        CurrentHealth -= damage;
+        if (CurrentHealth > 0)
         {
             animator.SetTrigger("hurt");
-            currentHealth -= damage;
+            CurrentHealth -= damage;
 
         } else 
         {
