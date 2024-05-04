@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower; 
+    private float horizontalInput;
+    private bool jump;
 
     private void Awake() 
     {
@@ -18,34 +21,45 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
+        horizontalInput = Input.GetAxis("Horizontal") * speed;
         
         // Jump
         if(Input.GetKey(KeyCode.Space) && IsGrounded()) 
         {
-            Jump();
+           jump = true; 
         }
+    }
 
+    private void FixedUpdate()
+    {
+        Move(horizontalInput);
+    }
+
+    private void Move(float move)
+    {
+        body.velocity = new Vector2(move * Time.fixedDeltaTime, body.velocity.y);
+        
         // Flip character when based on direction
-        if(horizontalInput > 0) 
+        if(move > 0) 
         {
             transform.localScale = Vector3.one;
-        } else if (horizontalInput < 0)  
+        } else if (move < 0)  
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
         // Set animator parameters
-        animator.SetBool("run", horizontalInput != 0);
+        animator.SetBool("run", move != 0);
         animator.SetBool("grounded", IsGrounded());
+
+        if (jump)
+        {
+            body.velocity = new Vector2(body.velocity.x, jumpPower); 
+            animator.SetTrigger("jump");
+        }
+        jump = false;
     }
 
-    private void Jump() 
-    { 
-        body.velocity = new Vector2(body.velocity.x, speed * jumpPower); 
-        animator.SetTrigger("jump");
-    }
 
     private bool IsGrounded()
     {
