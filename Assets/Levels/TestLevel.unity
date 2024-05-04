@@ -342,6 +342,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &64876526 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8099826344712699849, guid: 99ede9937b1e217e0b4f1fe204f7fdf0, type: 3}
+  m_PrefabInstance: {fileID: 6611809073870481930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &64876532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64876526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b35b84bbe2cf04edf95e408100677835, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
 --- !u!1 &80537047
 GameObject:
   m_ObjectHideFlags: 0
@@ -3103,6 +3121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
+  invulnerabilityTime: 1
+  numOfFlashes: 3
 --- !u!114 &1117986428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5540,6 +5560,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db163e78f04aaf88994a99e7a233395, type: 3}
+--- !u!1001 &1519241495164247147
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 320783521844567873, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_Name
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.2201276
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.42329782
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00483045
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170776427793551412, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69707d162268454078096ffa37e8f4a2, type: 3}
 --- !u!1001 &6594652712961320681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5652,7 +5729,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8099826344712699849, guid: 99ede9937b1e217e0b4f1fe204f7fdf0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 64876532}
   m_SourcePrefab: {fileID: 100100000, guid: 99ede9937b1e217e0b4f1fe204f7fdf0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -5666,3 +5746,4 @@ SceneRoots:
   - {fileID: 758369418}
   - {fileID: 6594652712961320681}
   - {fileID: 6611809073870481930}
+  - {fileID: 1519241495164247147}
