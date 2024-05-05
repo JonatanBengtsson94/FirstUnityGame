@@ -21,6 +21,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (damage == 0)
+        {
+            return;
+        }
         CurrentHealth -= damage;
         if (CurrentHealth > 0)
         {

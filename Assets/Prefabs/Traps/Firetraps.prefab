@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8907309022044541222}
   - component: {fileID: 3979638670546865836}
   - component: {fileID: 4550353632744369574}
+  - component: {fileID: 4425853706017837541}
   m_Layer: 0
   m_Name: Firetrap (1)
   m_TagString: Untagged
@@ -120,8 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9102f7d01bebf5b8983ebcf91575d152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
   activationTime: 5
+  damage: {fileID: 4425853706017837541}
 --- !u!61 &4550353632744369574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,6 +168,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &4425853706017837541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902114540092724839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0eb9a0e42f5a97b73b7ce47602233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount: 10
+  hostileTag: 0
 --- !u!1 &5114469007386542146
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,6 +195,7 @@ GameObject:
   - component: {fileID: 106149437701837022}
   - component: {fileID: 7112227736831782556}
   - component: {fileID: 1066134725890137925}
+  - component: {fileID: 8440403065947288745}
   m_Layer: 0
   m_Name: Firetrap
   m_TagString: Untagged
@@ -287,8 +303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9102f7d01bebf5b8983ebcf91575d152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
   activationTime: 5
+  damage: {fileID: 8440403065947288745}
 --- !u!61 &1066134725890137925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -334,6 +350,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &8440403065947288745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114469007386542146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0eb9a0e42f5a97b73b7ce47602233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageAmount: 10
+  hostileTag: 0
 --- !u!1 &5763636551602266004
 GameObject:
   m_ObjectHideFlags: 0

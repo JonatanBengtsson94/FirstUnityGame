@@ -7,7 +7,7 @@ public class Damage: MonoBehaviour
         Player,
         Enemy
     }
-    [SerializeField] private int damage;
+    public int DamageAmount;
     [SerializeField] private Tag hostileTag;
     private string hostileTagString;
 
@@ -20,7 +20,7 @@ public class Damage: MonoBehaviour
     {
         if (collision.CompareTag(hostileTagString))
         {
-            collision.GetComponent<Health>().TakeDamage(damage);
+            collision.GetComponent<Health>().TakeDamage(DamageAmount);
         }
     }
 }
