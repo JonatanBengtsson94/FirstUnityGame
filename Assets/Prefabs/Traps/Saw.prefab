@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8682483553039710332}
   - component: {fileID: 6173888020949711757}
   - component: {fileID: 5245685314544808957}
+  - component: {fileID: 7674446995263657056}
   m_Layer: 8
   m_Name: Saw
   m_TagString: Untagged
@@ -155,6 +156,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91407b8129ea77698df28a5091f00c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 25
   moveDistance: 0.5
   moveSpeed: 1.5
+--- !u!114 &7674446995263657056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8099826344712699849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e0eb9a0e42f5a97b73b7ce47602233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  hostileTag: 0
