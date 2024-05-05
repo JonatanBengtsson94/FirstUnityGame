@@ -8,7 +8,7 @@ public class RangedAttack : MonoBehaviour
     public void Attack(float angle)
     {
         GetProjectiles().transform.position = firePoint.position;
-        GetProjectiles().GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.parent.localScale.x), angle);
+        GetProjectiles().GetComponent<Projectile>().SetDirection(Mathf.Sign(transform.localScale.x), angle);
     }
     
     private GameObject GetProjectiles()
