@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -34,7 +35,8 @@ public class Health : MonoBehaviour
         } else 
         {
             animator.SetTrigger("die");
-            GetComponent<PlayerMovement>().enabled = false;
+            Destroy(gameObject);
+            //GetComponent<PlayerMovement>().enabled = false;
         }
     }
 

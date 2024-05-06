@@ -24,6 +24,7 @@ public class EnemyMovement: MonoBehaviour
             else 
             {
                 movingRight = false;
+                transform.localScale = Vector3.one;
             }
         } 
         else
@@ -35,6 +36,7 @@ public class EnemyMovement: MonoBehaviour
             else
             {
                 movingRight = true;
+                transform.localScale = new Vector3(-1 ,1, 1);
             }
         }
     }
