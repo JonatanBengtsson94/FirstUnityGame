@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
         {
             return;
         }
-        CurrentHealth -= damage;
+        CurrentHealth = Mathf.Clamp(CurrentHealth - damage, 0, startingHealth);
         if (CurrentHealth > 0)
         {
             animator.SetTrigger("hurt");
@@ -36,13 +36,12 @@ public class Health : MonoBehaviour
         {
             animator.SetTrigger("die");
             Destroy(gameObject);
-            //GetComponent<PlayerMovement>().enabled = false;
         }
     }
 
     public void Heal(int healAmount)
     {
-        CurrentHealth += healAmount;
+        CurrentHealth = Mathf.Clamp(CurrentHealth + healAmount, 0, startingHealth);
     }
 
     private IEnumerator Invunerability()
