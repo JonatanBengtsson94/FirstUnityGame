@@ -122,7 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationTime: 5
-  damage: {fileID: 4425853706017837541}
 --- !u!61 &4550353632744369574
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -180,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e0eb9a0e42f5a97b73b7ce47602233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 10
+  damage: 10
   hostileTag: 0
 --- !u!1 &5114469007386542146
 GameObject:
@@ -304,7 +303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationTime: 5
-  damage: {fileID: 8440403065947288745}
 --- !u!61 &1066134725890137925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e0eb9a0e42f5a97b73b7ce47602233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageAmount: 10
+  damage: 10
   hostileTag: 0
 --- !u!1 &5763636551602266004
 GameObject:

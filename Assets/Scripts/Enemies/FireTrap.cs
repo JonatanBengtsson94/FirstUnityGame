@@ -3,14 +3,15 @@ using UnityEngine;
 public class FireTrap : MonoBehaviour
 {
     private Animator animator;
+    private BoxCollider2D collider2D;
     [SerializeField] private float activationTime;
-    [SerializeField] private Damage damage;
     private float timer;
     private bool active;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        collider2D = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -22,11 +23,11 @@ public class FireTrap : MonoBehaviour
             animator.SetBool("active", active);
             if (active)
             {
-                damage.DamageAmount = 10;
+                collider2D.enabled = true;
             }
             else 
             {
-                damage.DamageAmount = 0;
+                collider2D.enabled = false;
             }
         }
         timer += Time.deltaTime; 
