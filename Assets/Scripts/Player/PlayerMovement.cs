@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,7 +7,9 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float speed;
-    [SerializeField] private float jumpPower; 
+    [SerializeField] private float jumpPower;
+    [SerializeField] private float coyoteTime;
+    private float coyoteTimer; 
     private float horizontalInput;
     private bool jump;
 
@@ -21,12 +22,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal") * speed;
         
-        // Jump
-        if(Input.GetKey(KeyCode.Space) && IsGrounded()) 
+        horizontalInput = Input.GetAxis("Horizontal") * speed;
+
+        if (IsGrounded())
         {
-           jump = true; 
+            coyoteTimer = coyoteTime;
+        }
+        else
+        {
+            coyoteTimer -= Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.Space) && coyoteTimer > 0) 
+        {
+            coyoteTimer = 0; 
+            jump = true;
         }
     }
 
@@ -40,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         body.velocity = new Vector2(move * Time.fixedDeltaTime, body.velocity.y);
         
         // Flip character when based on direction
-        if(move > 0) 
+        if (move > 0) 
         {
             transform.localScale = Vector3.one;
         } else if (move < 0)  
