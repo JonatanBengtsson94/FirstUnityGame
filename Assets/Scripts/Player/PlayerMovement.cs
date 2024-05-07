@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         {
             coyoteTimer -= Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.Space) && coyoteTimer > 0) 
+        if (Input.GetButtonDown("Jump") && coyoteTimer > 0) 
         {
             coyoteTimer = 0; 
             jump = true;

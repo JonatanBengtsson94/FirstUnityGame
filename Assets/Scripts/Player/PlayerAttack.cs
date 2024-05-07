@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerAttack: MonoBehaviour
 {
-    protected Animator animator;
+    private Animator animator;
     [Header("Gun attack")]
     [SerializeField] private float gunCooldown;
 
@@ -21,12 +21,12 @@ public class PlayerAttack: MonoBehaviour
     {
         gunTimer += Time.deltaTime;
         bombTimer += Time.deltaTime;
-        if (Input.GetMouseButton(0) && gunTimer > gunCooldown)
+        if (Input.GetButtonDown("Fire1") && gunTimer > gunCooldown)
         {
             FireGun();
             gunTimer = 0;
         }
-        if (Input.GetMouseButton(1) && bombTimer > bombCooldown)
+        if (Input.GetButtonDown("Fire2") && bombTimer > bombCooldown)
         {
             ThrowBomb();
             bombTimer = 0;
