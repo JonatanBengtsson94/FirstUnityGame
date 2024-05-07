@@ -10,6 +10,7 @@ public class EnemyMovement: MonoBehaviour
     private void Start()
     {
         startingXPos = transform.position.x;
+        transform.localScale = new Vector3(-1 ,1 ,1);
     }
 
 
@@ -24,7 +25,7 @@ public class EnemyMovement: MonoBehaviour
             else 
             {
                 movingRight = false;
-                transform.localScale = Vector3.one;
+                transform.localScale = new Vector3(-1 ,1 ,1);
             }
         } 
         else
@@ -36,7 +37,7 @@ public class EnemyMovement: MonoBehaviour
             else
             {
                 movingRight = true;
-                transform.localScale = new Vector3(-1 ,1, 1);
+                transform.localScale = Vector3.one;
             }
         }
     }

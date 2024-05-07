@@ -9,22 +9,30 @@ public class Lizard : MonoBehaviour
     [SerializeField] private float attackCooldown;
     private float timer;
     private Animator animator;
+    private EnemyMovement movement;
 
 
     void Awake()
     {
-       //boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+        movement = GetComponentInParent<EnemyMovement>();
     }
 
     void Update()
     {
         timer += Time.deltaTime;
-        if (PlayerInSight() && timer > attackCooldown)
+        if (PlayerInSight())
         {
-            //fireballAttack.Attack(0);
-            animator.SetTrigger("playerSighted");
-            timer = 0;
+            movement.enabled = false;
+            if (timer > attackCooldown)
+            {
+                animator.SetTrigger("playerSighted");
+                timer = 0;
+            }
+        }
+        else
+        {
+            movement.enabled = true;
         } 
     }
 
