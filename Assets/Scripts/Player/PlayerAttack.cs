@@ -40,6 +40,7 @@ public class PlayerAttack: MonoBehaviour
 
     private void FireGun()
     {
+        animator.SetTrigger("shoot");
         gunAttack.Attack(0);
     }
 }
