@@ -22,7 +22,8 @@ public class Lizard : MonoBehaviour
         timer += Time.deltaTime;
         if (PlayerInSight() && timer > attackCooldown)
         {
-            fireballAttack.Attack(0);
+            //fireballAttack.Attack(0);
+            animator.SetTrigger("playerSighted");
             timer = 0;
         } 
     }
