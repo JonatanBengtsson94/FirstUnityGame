@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -22,10 +21,6 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (damage == 0)
-        {
-            return;
-        }
         CurrentHealth = Mathf.Clamp(CurrentHealth - damage, 0, startingHealth);
         if (CurrentHealth > 0)
         {
@@ -34,7 +29,6 @@ public class Health : MonoBehaviour
 
         } else 
         {
-            animator.SetTrigger("die");
             Destroy(gameObject);
         }
     }
