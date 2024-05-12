@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectionArrow : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class SelectionArrow : MonoBehaviour
             }
         }
         previousInput = verticalInput;
+
+        if (Input.GetButtonDown("Fire1")) 
+        {
+            Interact();
+        }
     }
 
     private void ChangePosition(int change)
@@ -43,5 +49,10 @@ public class SelectionArrow : MonoBehaviour
         }
 
         rect.position = new Vector3(rect.position.x, options[currentPosition].position.y, 0); 
+    }
+
+    private void Interact()
+    {
+        options[currentPosition].GetComponent<Button>().onClick.Invoke();
     }
 }
