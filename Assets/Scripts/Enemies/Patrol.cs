@@ -1,10 +1,9 @@
 using UnityEngine;
 
-public class Patrol : MonoBehaviour
+public class Patrol : EnemyMovement 
 {
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
-    [SerializeField] private float moveSpeed;
     private float xmin;
     private float xmax;
     private bool movingRight = true;
