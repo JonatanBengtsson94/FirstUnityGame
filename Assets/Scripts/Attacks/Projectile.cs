@@ -52,6 +52,7 @@ public class Projectile : MonoBehaviour
             localScaleX = -localScaleX;
         }
 
+        transform.localScale = new Vector3(localScaleX, 1, 1);
         body.velocity = new Vector2(speed * localScaleX, speed * angle);
     }
 
