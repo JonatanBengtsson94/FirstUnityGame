@@ -4,7 +4,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     private Vector3 targetPos = Vector3.zero;
-    private float ymin = 0.25f;
+    [SerializeField]private float ymin = 0.25f;
     private float speed = 0.25f;
     [SerializeField] private Transform player;
     [SerializeField] private float lookAheadDistance;

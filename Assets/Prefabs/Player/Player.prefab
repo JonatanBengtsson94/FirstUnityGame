@@ -211,7 +211,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  speed: 200
+  speed: 250
   jumpPower: 8
   coyoteTime: 0.25
 --- !u!95 &4032703901619009238
