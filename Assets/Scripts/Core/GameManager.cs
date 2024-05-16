@@ -11,7 +11,7 @@ public class GameManager: MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("TestLevel");
+        SceneManager.LoadScene("Level1");
     }
 
     public void Quit()

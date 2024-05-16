@@ -212,7 +212,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   speed: 250
-  jumpPower: 8
+  jumpPower: 10
   coyoteTime: 0.25
 --- !u!95 &4032703901619009238
 Animator:
