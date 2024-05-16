@@ -4,7 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D body;
     private Animator animator;
-    private BoxCollider2D boxCollider;
+    private CircleCollider2D circleCollider;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        circleCollider = GetComponent<CircleCollider2D>();
     }
 
     private void Update()
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0, Vector2.down, 0.1f, groundLayer);
+        RaycastHit2D raycastHit = Physics2D.CircleCast(circleCollider.bounds.center, circleCollider.radius, Vector2.down, 0.1f, groundLayer);
         return raycastHit.collider != null;
     }
 }
