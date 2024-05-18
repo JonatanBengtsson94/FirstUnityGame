@@ -1,21 +1,20 @@
 # Basic unity platformer
 
-This is my first attempt at creating a game. It's a 2D platformer inspired by 8-bit games like Mario, Metroid and Megaman.
+This is my first attempt at creating a game.
 
 ## Table of Contents
-- [Screenshots](#screenshots)
 - [Description](#description)
 - [Features](#features)
 - [Controls](#controls)
 
-## Screenshots
-TODO
-
 ## Description
-TODO
+This game was created using Unity game engine and the Super Grotto Escape Asset pack by ansimuz
 
 ## Features
-TODO
+- Main Menu
+- Healthsystem
+- Projectile based shooting
+- Different enemies with different ai behaviour
 
 ## Controls
 - WASD for movement
