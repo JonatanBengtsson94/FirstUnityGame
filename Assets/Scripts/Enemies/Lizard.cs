@@ -10,7 +10,6 @@ public class Lizard : MonoBehaviour
     private EnemyMovement movement;
     private Vision vision;
 
-
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -41,8 +40,8 @@ public class Lizard : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(
-            boxCollider.bounds.center + new Vector3(10/ 2 * (transform.localScale.x), 0, 0),
-            new Vector3(boxCollider.bounds.size.x + 10, boxCollider.bounds.size.y, boxCollider.bounds.size.z)
+            boxCollider.bounds.center + new Vector3(5 / 2 * (transform.localScale.x), 0, 0),
+            new Vector3(boxCollider.bounds.size.x - 5, boxCollider.bounds.size.y, boxCollider.bounds.size.z)
         );
 
     }

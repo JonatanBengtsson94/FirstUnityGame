@@ -34,7 +34,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 6.761, y: -0.472, z: 0.0018686047}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6966049347163632553}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireballAttack: {fileID: 2323396522065302516}
-  boxCollider: {fileID: 0}
+  boxCollider: {fileID: 1387864261827882443}
   attackCooldown: 2
 --- !u!114 &2323396522065302516
 MonoBehaviour:
@@ -161,7 +161,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.15634856}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -172,7 +172,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.5220499, y: 0.6519399}
   m_EdgeRadius: 0
 --- !u!114 &3476776207148794698
 MonoBehaviour:
@@ -223,7 +223,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  visionRange: 100
+  visionRange: 5
 --- !u!114 &6257809081769365549
 MonoBehaviour:
   m_ObjectHideFlags: 0
