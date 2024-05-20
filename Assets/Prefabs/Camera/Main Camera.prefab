@@ -106,5 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ymin: 2
+  ymax: 2.5
   player: {fileID: 0}
   lookAheadDistance: 0.5
