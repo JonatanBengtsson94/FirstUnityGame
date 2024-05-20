@@ -1,10 +1,10 @@
-using System;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     private Vector3 targetPos = Vector3.zero;
-    [SerializeField]private float ymin = 0.25f;
+    [SerializeField] private float ymin = 0.25f;
+    [SerializeField] private float ymax = 3;
     private float speed = 0.25f;
     [SerializeField] private Transform player;
     [SerializeField] private float lookAheadDistance;
@@ -17,13 +17,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (player.position.y > ymin)
-        {
-            targetPos.y = player.position.y;
-        } else 
-        {
-            targetPos.y = ymin;    
-        }
+        targetPos.y = Mathf.Clamp(player.position.y, ymin, ymax);
         targetPos.x = player.position.x + (lookAheadDistance * player.localScale.x);
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, speed);
     }
