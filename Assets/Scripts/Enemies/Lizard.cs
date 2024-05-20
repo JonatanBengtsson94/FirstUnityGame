@@ -21,7 +21,7 @@ public class Lizard : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (vision.PlayerInSight(boxCollider))
+        if (vision.PlayerInSight(boxCollider, 0))
         {
             movement.enabled = false;
             if (timer > attackCooldown)
